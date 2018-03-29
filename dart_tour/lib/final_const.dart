@@ -5,7 +5,7 @@
 //final在定义的时候可以不赋初值，但是const不行，因为const变量是编译时常量;如下面的noValue的定义
 useFinal() {
   final name = "zhoupengzu";
-  final noValue;
+//  final noValue;
 }
 
 useConst() {
