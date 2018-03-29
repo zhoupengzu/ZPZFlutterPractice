@@ -42,6 +42,9 @@ class Person {
 //会默认调用父类的默认构造函数
 class Student extends Person {
   var stuName;
+  // setter和getter，要注意类型匹配
+  num get myAge => 20;
+  set myAge(var value) => value;
   //如果父类没有默认构造函数，则这里必须显式使用super调用父类的某个构造函数
   //如果有成员变量需要初始化，则要在调用父类之前
   Student():this.stuName='stuName',super.init_name(''){
@@ -52,6 +55,8 @@ class Student extends Person {
 useClass() {
   Student stu1 = new Student();
   stu1.name;
+//  stu1.myAge = '';
   print(stu1.stuName);
   Person.sum;
+  var person = new Person.init_age(20);
 }
