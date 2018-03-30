@@ -4,6 +4,7 @@ import 'LayoutImagesH.dart';
 import 'LayoutImagesV.dart';
 import 'ExpandedImages.dart';
 import 'pack_widget.dart';
+import 'container.dart';
 
 void main() => runApp(new MyApp());
 //void main() => runApp(new MyAppWithoutMaterial());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
 //  return LayoutImagesH.layoutImagesH();
 //  return LayoutImagesV.layoutImagesVSpaceBetween();
 //    return ExpandedImages.expandImagesWithMaterial();
-  return PackingWidget.normalStars();
+//  return PackingWidget.normalStars();
+  return ContainerPractice.containerPractice();
   }
 }
 
