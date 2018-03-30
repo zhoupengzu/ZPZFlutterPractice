@@ -37,7 +37,7 @@ class LayoutImagesH {
   static _getRowsImage(imageStr) {
     return new Image.asset(
       imageStr,
-      width: 100.0,
+//      width: 150.0,
     );
   }
 }

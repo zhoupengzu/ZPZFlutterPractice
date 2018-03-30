@@ -31,6 +31,9 @@ flutter:
     - images/pic1.jpg
     - images/pic2.jpg
     - images/pic3.jpg
+    - images/expand1.jpg
+    - images/expand2.jpg
+    - images/expand3.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
