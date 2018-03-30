@@ -5,6 +5,7 @@ import 'LayoutImagesV.dart';
 import 'ExpandedImages.dart';
 import 'pack_widget.dart';
 import 'container.dart';
+import 'grid.dart';
 
 void main() => runApp(new MyApp());
 //void main() => runApp(new MyAppWithoutMaterial());
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
 //  return LayoutImagesV.layoutImagesVSpaceBetween();
 //    return ExpandedImages.expandImagesWithMaterial();
 //  return PackingWidget.normalStars();
-  return ContainerPractice.containerPractice();
+//  return ContainerPractice.containerPractice();
+  return GridPractice.gridPractice();
   }
 }
 
