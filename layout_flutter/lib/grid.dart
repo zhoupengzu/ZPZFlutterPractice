@@ -17,12 +17,27 @@ class _MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<_MyHomePage>  {
   @override
   Widget build(BuildContext context) {
-    GridView gridView = new GridView.extent(
-        maxCrossAxisExtent: 150.0,
-      padding: const EdgeInsets.all(4.0),
-      mainAxisSpacing: 5.0,
-      crossAxisSpacing: 10.0,
-      children: _getListWidget(),
+    var stack = new Stack(
+      alignment: const Alignment(0.6, 0.6),
+      children: [
+        new CircleAvatar(
+          backgroundImage: new AssetImage('images/expand1.jpg'),
+          radius: 100.0,
+        ),
+        new Container(
+          decoration: new BoxDecoration(
+            color: Colors.black45,
+          ),
+          child: new Text(
+            'Mia B',
+            style: new TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ],
     );
 
     // TODO: implement build
@@ -31,7 +46,7 @@ class _MyHomePageState extends State<_MyHomePage>  {
         title: new Text("Grid", style: new TextStyle(color: Colors.white, fontSize: 20.0)),
         backgroundColor: Colors.green,
       ),
-      body: new SafeArea(child: gridView),
+      body: new SafeArea(child: new Center(child: stack)),
     );
     MaterialApp materialApp = new MaterialApp(
       home: scaffold,
