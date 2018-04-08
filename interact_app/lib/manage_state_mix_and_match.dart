@@ -23,6 +23,7 @@ class ManageStateMixMatch {
 
 class _ParentWidget extends StatefulWidget {
   bool active = false;
+  var num = 0;
   @override
   State<StatefulWidget> createState() => new _ParentWidgetState();
 }
@@ -37,6 +38,8 @@ class _ParentWidgetState extends State<_ParentWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print("Parent State:${widget.num}");
+    widget.num += 1;
     // TODO: implement build
     return new Container(
       child: new TapboxC(onChanged: _handleTapboxChanged, active: widget.active),
@@ -47,6 +50,7 @@ class _ParentWidgetState extends State<_ParentWidget> {
 typedef void changedValue(bool newValue);
 
 class TapboxC extends StatefulWidget {
+  var num = 0;
   final bool _active;
   bool _highlight = false;
   changedValue changed;
@@ -61,7 +65,7 @@ class TapboxC extends StatefulWidget {
 }
 
 class _TapboxCState extends State<TapboxC> {
-
+  var num = 0;
   void _handleTap() {
     widget.changed(!widget._active);
   }
@@ -86,7 +90,9 @@ class _TapboxCState extends State<TapboxC> {
 
   @override
   Widget build(BuildContext context) {
-    print("_TapboxCState build");
+    print("_TapboxCState build:${widget.num}, this num:$num");
+    num += 1;
+    widget.num += 1;
     // TODO: implement build
     return new GestureDetector(
       onTap: _handleTap,
