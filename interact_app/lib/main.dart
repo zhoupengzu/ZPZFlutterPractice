@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'favorite_widget.dart';
+import 'manage_state_own.dart';
 
 void main() => runApp(new MyApp());
 
@@ -6,7 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new _MyHomeWidget();
+//    return new _MyHomeWidget();
+  return ManageStateOwn.createManageStateOwn();
   }
 }
 
@@ -46,11 +49,12 @@ class _MyHomeState extends State<_MyHomeWidget> {
               ],
             ),
           ),
-          new Icon(
-            Icons.star,
-            color: Colors.red,
-          ),
-          new Text("41")
+          new FavoriteWidget()
+//          new Icon(
+//            Icons.star,
+//            color: Colors.red,
+//          ),
+//          new Text("41")
         ],
       ),
     );
