@@ -90,9 +90,9 @@ class _TapboxCState extends State<TapboxC> {
     // TODO: implement build
     return new GestureDetector(
       onTap: _handleTap,
-//      onTapDown: _handleTapDown,
-//      onTapUp: _handleTapUp,
-//      onTapCancel: _handleTapCancel,
+      onTapDown: _handleTapDown,
+      onTapUp: _handleTapUp,
+      onTapCancel: _handleTapCancel,
       child: new Container(
         width: 200.0,
         height: 200.0,
