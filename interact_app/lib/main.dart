@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'favorite_widget.dart';
 import 'manage_state_own.dart';
+import 'manage_state_parent.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
 //    return new _MyHomeWidget();
-  return ManageStateOwn.createManageStateOwn();
+//  return ManageStateOwn.createManageStateOwn();
+  return ManageStateParent.createParentMangeState();
   }
 }
 
