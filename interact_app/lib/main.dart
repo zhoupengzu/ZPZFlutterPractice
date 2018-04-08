@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'favorite_widget.dart';
 import 'manage_state_own.dart';
 import 'manage_state_parent.dart';
+import 'manage_state_mix_and_match.dart';
 
 void main() => runApp(new MyApp());
 
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
 //    return new _MyHomeWidget();
 //  return ManageStateOwn.createManageStateOwn();
-  return ManageStateParent.createParentMangeState();
+//  return ManageStateParent.createParentMangeState();
+  return ManageStateMixMatch.createMixMatchState();
   }
 }
 
