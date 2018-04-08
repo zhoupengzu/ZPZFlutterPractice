@@ -8,7 +8,7 @@ class ManageStateMixMatch {
         appBar: new AppBar(
           backgroundColor: Colors.green,
           title: new Text(
-            "Manage State Own",
+            "Manage State mix-and-match",
             style:
             new TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
@@ -44,20 +44,26 @@ class _ParentWidgetState extends State<_ParentWidget> {
   }
 }
 
+typedef void changedValue(bool newValue);
+
 class TapboxC extends StatefulWidget {
   final bool _active;
   bool _highlight = false;
-  final ValueChanged<bool> onChanged;
-  TapboxC({Key key, bool active, @required this.onChanged})
-      :this._active = active, super(key: key) { }
+  changedValue changed;
+//  final ValueChanged<bool> onChanged;
+  TapboxC({Key key, bool active, @required changedValue onChanged})
+      :this._active = active, this.changed = onChanged, super(key: key) { }
   @override
-  State<StatefulWidget> createState() => new _TapboxCState();
+  State<StatefulWidget> createState() {
+    print("TapBoxC createState");
+    return new _TapboxCState();
+  }
 }
 
 class _TapboxCState extends State<TapboxC> {
 
   void _handleTap() {
-    widget.onChanged(!widget._active);
+    widget.changed(!widget._active);
   }
 
   void _handleTapDown(TapDownDetails details) {
@@ -80,12 +86,13 @@ class _TapboxCState extends State<TapboxC> {
 
   @override
   Widget build(BuildContext context) {
+    print("_TapboxCState build");
     // TODO: implement build
     return new GestureDetector(
       onTap: _handleTap,
-      onTapDown: _handleTapDown,
-      onTapUp: _handleTapUp,
-      onTapCancel: _handleTapCancel,
+//      onTapDown: _handleTapDown,
+//      onTapUp: _handleTapUp,
+//      onTapCancel: _handleTapCancel,
       child: new Container(
         width: 200.0,
         height: 200.0,
