@@ -37,6 +37,15 @@ class _FlutterLogoState extends State<_FlutterLogoWidget> {
       child: new Column(
         children: <Widget>[
           new Container(
+            width: 100.0,
+            margin: const EdgeInsets.only(top: 30.0),
+            child: new Placeholder(
+              fallbackWidth: 100.0,
+              fallbackHeight: 100.0,
+              color: Colors.orange,
+            ),
+          ),
+          new Container(
             margin: const EdgeInsets.only(
               top: 30.0,
               bottom: 30.0,
@@ -58,7 +67,7 @@ class _FlutterLogoState extends State<_FlutterLogoWidget> {
               // 当colors、textColor或者style变化的时候起作用
               seconds: 3,
             ),
-            curve: Curves.elasticOut,  // 动画方式
+            curve: Curves.elasticOut, // 动画方式
           )
         ],
       ),
