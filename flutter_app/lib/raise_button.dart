@@ -20,7 +20,7 @@ class _RaisedButtonState extends State<_RaisedButtonWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return raisedButtonWithChild();
+    return raisedButtonWithIcon();
   }
 
   clickedRaisedButton() {
@@ -28,7 +28,7 @@ class _RaisedButtonState extends State<_RaisedButtonWidget> {
   }
 
   hightLightChanged(bool changed) {
-    if(changed) {
+    if (changed) {
       print('Changed');
     } else {
       print('No Changed');
@@ -74,7 +74,17 @@ class _RaisedButtonState extends State<_RaisedButtonWidget> {
           seconds: 5,
         ),
         onHighlightChanged: this.hightLightChanged, // 可以用来监听按钮的按下和放开过程
-        textTheme: ButtonTextTheme.accent,
+        textTheme: ButtonTextTheme.accent, // 搞不懂这个
+      ),
+    );
+  }
+
+  raisedButtonWithIcon() {
+    return new Center(
+      child: new RaisedButton.icon(
+        onPressed: this.clickedRaisedButton,
+        icon: new Icon(Icons.star),
+        label: new Text('RaisedButton'),
       ),
     );
   }
