@@ -49,11 +49,11 @@ class _BottomNavigationBarState extends State<_BottomNavigationBarWidget> {
           title: 'Green',
           icon: new Icon(Icons.router),
         ),
-        this.createBaseNavigationItems(
-          color: Colors.cyan,
-          title: 'Cyan',
-          icon: new Icon(Icons.favorite),
-        ),
+        // this.createBaseNavigationItems(
+        //   color: Colors.cyan,
+        //   title: 'Cyan',
+        //   icon: new Icon(Icons.favorite),
+        // ),
         
       ],
       onTap: onTap,
