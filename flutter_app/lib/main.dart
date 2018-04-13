@@ -6,6 +6,7 @@ import 'text.dart';
 import 'raise_button.dart';
 import 'app_bar.dart';
 import 'flutter_logo.dart';
+import 'bottom_navigation_bar.dart';
 
 void main() => runApp(new MyApp());
 
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return FlutterLogoPractice.flutterLogo();
+    return BottomNavigationBarPractice.bottomNavigationBar();
   }
 }

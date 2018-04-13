@@ -10,6 +10,7 @@ class Root {
             style:
                 new TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
+          elevation: 0.0,
         ),
         body: body,
       ),
