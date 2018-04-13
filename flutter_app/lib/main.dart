@@ -8,6 +8,7 @@ import 'app_bar.dart';
 import 'flutter_logo.dart';
 import 'bottom_navigation_bar.dart';
 import 'tab_bar.dart';
+import 'drawer.dart';
 
 void main() => runApp(new MyApp());
 
@@ -15,6 +16,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return TabBarPractice.tabBar();
+    return DrawerPractice.drawer();
   }
 }
